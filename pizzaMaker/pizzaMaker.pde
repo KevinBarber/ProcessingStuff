@@ -26,14 +26,25 @@ void draw(){
   PImage pepperoni = loadImage("pepperoni.ppm.gif");  
     pepperoni.resize(10, 10);
     
+     PImage tomato = loadImage("slice-tomato-vector-illustration-32888784.jpg");  
+    tomato.resize(20, 20);
+    
     image(pepperoni, 230, 270);
     image(pepperoni, 210, 230);
     image(pepperoni, 240, 260);
-    if(mousePressed){
+   
+     if(mouseButton == LEFT){
       
           image(pepperoni, mouseX, mouseY);
           sound.trigger();  
     }
+  else if (mousePressed && (mouseButton == RIGHT)){
+       image(tomato, mouseX, mouseY);
+          sound.trigger();  
+   }
+
+   
+   
 
 
   
